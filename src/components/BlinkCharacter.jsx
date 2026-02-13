@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+
 const BlinkCharacter = () => {
   const [isBlinking, setIsBlinking] = useState(false);
 
