@@ -45,7 +45,7 @@ const App = () => {
     <InteractiveBackground/>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Portfolio" element={<Home />} />
         <Route path="/links" element={<Links />} />
       </Routes>
     </Router>
