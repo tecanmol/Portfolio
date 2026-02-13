@@ -41,12 +41,12 @@ const Home = () =>{
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Portfolio">
     <InteractiveBackground/>
 
       <Routes>
-        <Route path="/Portfolio" element={<Home />} />
-        <Route path="/Portfolio/links" element={<Links />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/links" element={<Links />} />
       </Routes>
     </Router>
   );
