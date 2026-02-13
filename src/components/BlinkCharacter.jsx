@@ -29,7 +29,7 @@ const BlinkCharacter = () => {
 
       {/* ===== DESKTOP IMAGES ===== */}
       <motion.img
-        src="/assets/open.png"
+        src="assets/open.png"
         alt="open desktop"
         className="hidden md:block absolute right-0 top-0 h-full w-auto object-contain"
         animate={{ opacity: isBlinking ? 0 : 1 }}
@@ -37,7 +37,7 @@ const BlinkCharacter = () => {
       />
 
       <motion.img
-        src="/assets/blink.png"
+        src="assets/blink.png"
         alt="blink desktop"
         className="hidden md:block absolute right-0 top-0 h-full w-auto object-contain"
         animate={{ opacity: isBlinking ? 1 : 0 }}
@@ -46,7 +46,7 @@ const BlinkCharacter = () => {
 
       {/* ===== MOBILE IMAGES ===== */}
       <motion.img
-        src="/assets/open-mobile.png"
+        src="assets/open-mobile.png"
         alt="open mobile"
         className="md:hidden absolute right-0 top-0 h-full w-auto object-contain"
         animate={{ opacity: isBlinking ? 0 : 1 }}
@@ -54,7 +54,7 @@ const BlinkCharacter = () => {
       />
 
       <motion.img
-        src="/assets/blink-mobile.png"
+        src="assets/blink-mobile.png"
         alt="blink mobile"
         className="md:hidden absolute right-0 top-0 h-full w-auto object-contain"
         animate={{ opacity: isBlinking ? 1 : 0 }}

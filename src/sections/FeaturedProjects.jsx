@@ -30,7 +30,7 @@ const FeaturedProjects = () => {
           category="Browser Extension"
           title="TC_Extension"
           description="Chrome extension that analyzes website terms and conditions, highlighting critical risks using a local AI backend."
-          image="/assets/TC_Extension.png"
+          image="assets/TC_Extension.png"
           gradient="bg-gradient-to-br from-orange-500/80 to-yellow-500/70"
           tech={["JavaScript", "React", "Node.js", "Python", "LLM"]}
           githubLink="https://github.com/tecanmol/TC_Extension"
@@ -41,7 +41,7 @@ const FeaturedProjects = () => {
           category="Web Application"
           title="AI Career Coach"
           description="AI-powered career guidance platform generating personalized career roadmaps through psychometric analysis using Gemini AI."
-          image="/assets/AI Career Coach.png"
+          image="assets/AI Career Coach.png"
           gradient="bg-gradient-to-br from-green-500/80 to-emerald-600/70"
           tech={["TypeScript", "JavaScript", "React", "Node.js", "REST APIs", "Google Gemini API"]}
         //   githubLink="https://github.com/tecanmol/TC_Extension"
