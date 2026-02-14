@@ -41,7 +41,7 @@ const Home = () =>{
 
 const App = () => {
   return (
-    <Router basename="/Portfolio">
+    <Router basename="/Portfolio/">
     <InteractiveBackground/>
 
       <Routes>
