@@ -25,7 +25,7 @@ const cards = [
 
 const MoreToExplore = () => {
   return (
-    <section className="relative py-32 px-6 md:px-16 max-w-7xl mx-auto">
+    <section id="other" className="relative py-32 px-6 md:px-16 max-w-7xl mx-auto">
 
       {/* Header */}
       <div className="text-center mb-20">

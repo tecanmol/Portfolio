@@ -2,7 +2,7 @@ import ProjectBlock from "../components/ProjectBlock";
 
 const FeaturedProjects = () => {
   return (
-    <section className="relative py-24 md:py-32 px-6 md:px-16 max-w-6xl mx-auto">
+    <section id="projects" className="relative py-24 md:py-32 px-6 md:px-16 max-w-6xl mx-auto">
 
       {/* Header */}
       <div className="text-center mb-20 md:mb-28">

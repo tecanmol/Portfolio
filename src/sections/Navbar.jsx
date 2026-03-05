@@ -1,17 +1,37 @@
 import { useState } from "react";
-import { Menu, X, Calendar, Moon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
-const links = ["Home", "About", "Projects", "Skills", "Other"];
+const links = [
+  { name: "Home", id: "home" },
+  { name: "About", id: "about" },
+  { name: "Projects", id: "projects" },
+  { name: "Other", id: "other" },
+];
 
 const Navbar = () => {
+
   const [active, setActive] = useState("Home");
   const [open, setOpen] = useState(false);
+
+  const scrollToSection = (id, name) => {
+
+    const element = document.getElementById(id);
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+    setActive(name);
+    setOpen(false);
+  };
 
   return (
     <header className="fixed top-6 left-0 w-full z-50 flex justify-center px-6">
 
-      {/* DESKTOP NAV */}
+      {/* Desktop Nav */}
       <div className="hidden md:flex items-center gap-2 
         bg-white/5 backdrop-blur-xl 
         border border-white/10 
@@ -19,45 +39,33 @@ const Navbar = () => {
 
         {links.map((item) => (
           <button
-            key={item}
-            onClick={() => setActive(item)}
+            key={item.name}
+            onClick={() => scrollToSection(item.id, item.name)}
             className={`px-6 py-2 rounded-full text-sm font-medium transition
-            ${active === item
+            ${active === item.name
                 ? "bg-[#231c47] text-white shadow-inner"
                 : "text-neutral-400 hover:text-white"
             }`}
           >
-            {item}
+            {item.name}
           </button>
         ))}
       </div>
 
-      {/* MOBILE NAV */}
-      <div className="md:hidden w-full flex justify-between items-center">
+      {/* Mobile Nav */}
+      <div className="md:hidden w-full flex justify-end">
 
-        {/* Left Icon */}
-        {/* <button className="w-12 h-12 flex items-center justify-center 
-          rounded-full bg-white/5 backdrop-blur-xl border border-white/10">
-          <Moon size={18} />
-        </button> */}
-
-        {/* Center Toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="ml-auto w-12 h-12 flex items-center justify-center 
+          className="w-12 h-12 flex items-center justify-center 
           rounded-full bg-white/5 backdrop-blur-xl border border-white/10"
         >
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
 
-        {/* Right Icon */}
-        {/* <button className="w-12 h-12 flex items-center justify-center 
-          rounded-full bg-white/5 backdrop-blur-xl border border-white/10">
-          <Calendar size={18} />
-        </button> */}
       </div>
 
-      {/* MOBILE DROPDOWN */}
+      {/* Mobile Dropdown */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -74,28 +82,17 @@ const Navbar = () => {
 
               {links.map((item) => (
                 <button
-                  key={item}
-                  onClick={() => {
-                    setActive(item);
-                    setOpen(false);
-                  }}
+                  key={item.name}
+                  onClick={() => scrollToSection(item.id, item.name)}
                   className={`py-3 rounded-full transition
-                    ${active === item
+                    ${active === item.name
                      ? "bg-[#231c47] text-white shadow-inner"
                        : "text-neutral-400 hover:text-white"
                     }`}
                 >
-                  {item}
+                  {item.name}
                 </button>
               ))}
-
-              {/* Book a Call Button */}
-              {/* <button className="mt-4 flex items-center justify-center gap-2 
-                border border-white/10 
-                rounded-full py-3 text-white hover:bg-white/10 transition">
-                <Calendar size={16} />
-                Book a Call
-              </button> */}
 
             </div>
           </motion.div>
