@@ -1,16 +1,30 @@
-# React + Vite
+# anmol.is-a-good.dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio site — built to showcase my work, skills, and a bit of who I am.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **AI Chat** — A RAG-based chatbot on the hero section that can answer questions about me, my projects, and my background
+- **Interactive Background** — Mouse-tracked dot grid that follows your cursor
+- **Blinking Character** — A small animated character that blinks at random intervals
+- **About Section** — Draggable skill cards, an interactive globe showing my location, and an orbiting tech stack display
+- **Featured Projects** — Highlighted work with descriptions, tech pills, and GitHub links
+- **Links Page** — A dedicated page with all my social and professional profiles
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** + **Vite**
+- **Tailwind CSS v4**
+- **Motion** (Framer Motion)
+- **COBE** — for the WebGL globe
+- **React Router DOM**
 
-## Expanding the ESLint configuration
+## Deployment
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Deployed via GitHub Pages.
+
+## Contact
+
+- **Email:** panmol735@gmail.com
+- **GitHub:** [tecanmol](https://github.com/tecanmol)
+- **LinkedIn:** [Anmol Pandey](https://www.linkedin.com/in/anmol-pandey-6323b220a/)
