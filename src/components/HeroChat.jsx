@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { motion } from "motion/react"
 
 const suggestions = ["Work", "About me", "Skills", "Contact"];
 
@@ -90,8 +91,17 @@ export default function HeroChat() {
 
   };
 
+  const variants ={
+        hidden:{opacity:0, x:-50},
+        visible: {opacity:1, x:0}
+    }
+
   return (
-    <div className="mt-10 w-full max-w-2xl px-4 sm:px-6 md:px-0">
+    <motion.div className="mt-10 w-full max-w-2xl px-4 sm:px-6 md:px-0"
+    variants={variants}
+    initial="hidden" 
+    animate="visible"
+    transition={{delay: 2.2}}>
 
       <div
         className="
@@ -226,6 +236,6 @@ export default function HeroChat() {
         </div>
 
       </div>
-    </div>
+    </motion.div>
   );
 }

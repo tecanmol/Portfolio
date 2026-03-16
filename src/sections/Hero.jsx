@@ -12,7 +12,7 @@ const Hero = () => {
         </div>
     </div> */}
 
-       <HeroChat/>
+    <HeroChat/>
    
 </section>
   );
