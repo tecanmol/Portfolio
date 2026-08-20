@@ -30,7 +30,7 @@ export default function HeroChat() {
 
     try {
 
-      const res = await fetch("https://web-production-af570.up.railway.app/ask", {
+      const res = await fetch("https://ragchatbotbackend-production-08bc.up.railway.app/ask", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
