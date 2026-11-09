@@ -26,70 +26,78 @@ const ProjectBlock = ({
         rel="noopener noreferrer"
         className={`
           block relative rounded-2xl
-          p-6 md:p-8
           border border-[rgba(255,255,255,0.06)]
-          bg-[#0f1011]/60 backdrop-blur-sm
-          ${gradient}
           transition-all duration-300
-          hover:border-[rgba(255,255,255,0.1)]
-          hover:bg-[#0f1011]/80
+          hover:border-[rgba(255,255,255,0.12)]
+          overflow-hidden
+          ${gradient}
         `}
       >
-        {/* Meta */}
-        <div className="flex items-center gap-4 mb-4 text-[#62666d] text-xs font-mono tracking-wider">
-          <span>{index}</span>
-          <span className="w-1 h-1 rounded-full bg-[#62666d]" />
-          <span className="text-[#8a8f98] uppercase tracking-widest text-[10px]">{category}</span>
-        </div>
+        {/* Full-bleed background image */}
+        {image && (
+          <div className="absolute inset-0 z-0">
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover
+                transition-transform duration-500 group-hover:scale-105
+                opacity-40 group-hover:opacity-50"
+            />
+          </div>
+        )}
 
-        {/* Title */}
-        <h3 className="text-xl md:text-2xl font-semibold text-[#f7f8f8] mb-3 tracking-tight">
-          {title}
-        </h3>
+        {/* Dark overlay — gradient from top-left to bottom-right */}
+        <div className="absolute inset-0 z-[1]
+          bg-gradient-to-br from-[#0a0b0c]/90 via-[#0a0b0c]/70 to-[#0a0b0c]/50
+          group-hover:from-[#0a0b0c]/85 group-hover:via-[#0a0b0c]/60"
+        />
 
-        {/* Description */}
-        <p className="text-[#8a8f98] text-sm md:text-base leading-relaxed mb-6 max-w-2xl">
-          {description}
-        </p>
-
-        {/* Tech tags */}
-        <div className="flex flex-wrap gap-2 mb-6">
-          {tech.map((item, i) => (
-            <span
-              key={i}
-              className="px-2.5 py-1 text-xs rounded-md
-                bg-[rgba(255,255,255,0.04)]
-                text-[#8a8f98]
-                border border-[rgba(255,255,255,0.06)]
-                font-mono"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
-
-        {/* Bottom row: image preview + github link */}
-        <div className="flex items-center justify-between">
-          {/* Project preview */}
-          {image && (
-            <div className="flex items-center gap-3">
-              <div className="rounded-xl overflow-hidden
-                border border-[rgba(255,255,255,0.06)]
-                shadow-sm">
-                <img
-                  src={image}
-                  alt={title}
-                  className="w-20 h-14 md:w-24 md:h-16 object-cover
-                    transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+        {/* Content */}
+        <div className="relative z-[2] p-6 md:p-8 lg:p-10 flex flex-col justify-between h-full min-h-[280px]">
+          {/* Top section: index + category + title */}
+          <div>
+            {/* Meta */}
+            <div className="flex items-center gap-3 mb-3 text-[#62666d] text-xs font-mono tracking-wider">
+              <span>{index}</span>
+              <span className="w-1 h-1 rounded-full bg-[#62666d]" />
+              <span className="text-[#8a8f98] uppercase tracking-widest text-[10px]">{category}</span>
             </div>
-          )}
 
-          {/* GitHub link */}
-          <div className="flex items-center gap-2 text-[#8a8f98] group-hover:text-[#d0d6e0] transition-colors">
-            <Github size={16} />
-            <span className="text-xs font-medium hidden md:inline">View on GitHub</span>
+            {/* Title */}
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#f7f8f8] mb-3 tracking-tight">
+              {title}
+            </h3>
+
+            {/* Description */}
+            <p className="text-[#9a9ea6] text-sm md:text-base leading-relaxed max-w-xl mb-5">
+              {description}
+            </p>
+          </div>
+
+          {/* Bottom section: tech tags + github */}
+          <div className="flex items-end justify-between gap-4 flex-wrap">
+            {/* Tech tags */}
+            <div className="flex flex-wrap gap-2">
+              {tech.map((item, i) => (
+                <span
+                  key={i}
+                  className="px-2.5 py-1 text-xs rounded-md
+                    bg-[rgba(255,255,255,0.06)]
+                    text-[#9a9ea6]
+                    border border-[rgba(255,255,255,0.08)]
+                    font-mono
+                    backdrop-blur-sm"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+
+            {/* GitHub link */}
+            <div className="flex items-center gap-2 text-[#62666d] group-hover:text-[#d0d6e0] transition-colors">
+              <Github size={16} />
+              <span className="text-xs font-medium hidden md:inline">View on GitHub</span>
+            </div>
           </div>
         </div>
       </a>
