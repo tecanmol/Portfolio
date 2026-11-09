@@ -1,20 +1,15 @@
-import BlinkCharacter from "../components/BlinkCharacter";
 import HeroChat from "../components/HeroChat";
 import HeroText from "../components/HeroText";
+import { motion } from "motion/react";
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-[85vh] overflow-hidden">
-    <HeroText />
-    {/* <div className="flex justify-center mt-10 md:hidden">
-        <div className="h-[280px] w-[150px]  opacity-90">
-            <BlinkCharacter />
-        </div>
-    </div> */}
-
-    <HeroChat/>
-   
-</section>
+    <section id="home" className="relative min-h-[90vh] overflow-hidden pt-24">
+      <div className="max-w-4xl mx-auto px-6 md:px-10">
+        <HeroText />
+        <HeroChat />
+      </div>
+    </section>
   );
 };
 
