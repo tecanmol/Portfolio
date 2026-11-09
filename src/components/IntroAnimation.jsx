@@ -19,6 +19,15 @@ const IntroAnimation = ({ onComplete }) => {
   const [index, setIndex] = useState(0);
   const [done, setDone] = useState(false);
   const intervalRef = useRef(null);
+  const hasInteracted = useRef(false);
+
+  const handleSkip = () => {
+    if (hasInteracted.current) return;
+    hasInteracted.current = true;
+    clearInterval(intervalRef.current);
+    setDone(true);
+    setTimeout(() => onComplete && onComplete(), 1000);
+  };
 
   useEffect(() => {
     const totalGreetTime = greetings.length * INTRO_DURATION;
@@ -47,10 +56,11 @@ const IntroAnimation = ({ onComplete }) => {
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#0a0b0c]"
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#0a0b0c] cursor-pointer"
       initial={{ opacity: 1 }}
       animate={{ opacity: done ? 0 : 1 }}
       transition={{ duration: 1, ease: "easeInOut" }}
+      onClick={handleSkip}
     >
       {/* Dots indicator */}
       <div className="flex items-center gap-1.5 mb-16">

@@ -13,7 +13,7 @@ import Links from "./pages/Links";
 const Home = () => {
   return (
     <div className="container mx-auto max-w-5xl relative">
-      <Navbar />
+      <Navbar showIntro={showIntro} />
       <Hero />
       <About />
       <FeaturedProjects />
@@ -33,7 +33,7 @@ const App = () => {
       )}
       <InteractiveBackground />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home showIntro={showIntro} />} />
         <Route path="/links" element={<Links />} />
       </Routes>
     </Router>

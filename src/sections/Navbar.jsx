@@ -9,11 +9,12 @@ const links = [
   { name: "Other", id: "other" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ showIntro = true }) => {
   const [active, setActive] = useState("Home");
   const [open, setOpen] = useState(false);
 
   const scrollToSection = (id, name) => {
+    if (showIntro) return;
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -23,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-5 left-0 w-full z-50 flex justify-center px-4">
+    <header className={`fixed top-5 left-0 w-full z-50 flex justify-center px-4 transition-opacity duration-700 ${showIntro ? "opacity-0 pointer-events-none" : "opacity-100"}`}>
       {/* Desktop Nav */}
       <div className="hidden md:flex items-center gap-1
         bg-[#0f1011]/80 backdrop-blur-xl
