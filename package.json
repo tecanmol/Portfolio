@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "homepage": "https://anmol.is-a-good.dev/",
+  "homepage": "https://anmol.is-a.dev/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "build": "vite build && copy dist\\index.html dist\\404.html",
+    "build": "vite build && cp dist/index.html dist/404.html",
     "lint": "eslint .",
     "preview": "vite preview"
   },
