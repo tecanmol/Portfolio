@@ -7,72 +7,88 @@ const FeaturedProjects = () => {
       category: "Hugging Face Space",
       title: "MunshiLM",
       description:
-        "A Hinglish-language AI assistant that understands and generates natural Hinglish text. Deployed on Hugging Face Spaces with a chat interface for real-time conversations.",
+        "Hinglish-language AI assistant that understands and generates natural Hinglish conversations. Deployed on Hugging Face Spaces with real-time chat interface.",
       gradient: "bg-gradient-to-br from-[#7170ff]/20 to-[#ca2f8c]/15",
-      tech: ["Python", "LLM", "Transformers", "Hugging Face", "RAG"],
+      tech: ["Python", "LLM", "Transformers", "Hugging Face"],
       image: "assets/MunshiLM.png",
       githubLink: "https://huggingface.co/spaces/tecanmol/MunshiLM",
-      featured: true,
     },
     {
       index: "02",
       category: "Browser Extension",
       title: "T&C Guardian",
       description:
-        "Chrome extension that automatically analyzes website Terms & Conditions using AI — highlighting key summaries, unfair clauses, and privacy risks.",
+        "Chrome extension that analyzes website Terms & Conditions using AI — highlighting key summaries, unfair clauses, and privacy risks.",
       gradient: "bg-gradient-to-br from-orange-500/15 to-yellow-500/10",
       tech: ["JavaScript", "React", "Node.js", "Python", "LLM"],
       image: "assets/TC_Extension.png",
       githubLink: "https://github.com/tecanmol/TC_Extension",
-      featured: true,
     },
     {
       index: "03",
       category: "AI Agent",
       title: "Customer Support Agent",
       description:
-        "RAG-based customer support agent for e-commerce, built with LangGraph and LangChain. Uses ChromaDB for vector search and local embeddings for accurate, context-aware responses.",
+        "RAG-based customer support agent built with LangGraph and LangChain. Uses ChromaDB for vector search and local embeddings for context-aware responses.",
       gradient: "bg-gradient-to-br from-[#7170ff]/15 to-blue-500/10",
       tech: ["Python", "LangGraph", "LangChain", "ChromaDB", "Streamlit"],
       image: "assets/Customer_support_agent.png",
       githubLink: "https://github.com/tecanmol/Customer-support-agent",
-      featured: true,
     },
     {
       index: "04",
       category: "Healthcare AI",
       title: "MedGuard",
       description:
-        "Offline skin-disease triage system using TensorFlow.js to detect and classify 34 common skin conditions — designed for accessibility in low-connectivity settings.",
+        "Offline skin-disease triage system using TensorFlow.js to detect and classify 34 common skin conditions — designed for low-connectivity settings.",
       gradient: "bg-gradient-to-br from-blue-500/15 to-cyan-500/10",
       tech: ["TypeScript", "React", "TensorFlow.js", "Computer Vision"],
       image: "assets/MedGuard_AI.png",
       githubLink: "https://github.com/tecanmol/MedGuard_AI",
-      featured: true,
     },
     {
       index: "05",
       category: "Browser Extension",
       title: "JevGuard",
       description:
-        "AI-powered ad detector that uses semantic classification to identify and remove ads from webpages — going beyond traditional rule-based ad blockers.",
+        "AI-powered ad detector using semantic classification to identify and remove ads from webpages — going beyond traditional rule-based blockers.",
       gradient: "bg-gradient-to-br from-green-500/15 to-emerald-500/10",
       tech: ["Python", "NLP", "Browser Extension", "AI Classification"],
       image: "assets/JevGaurd.png",
       githubLink: "https://github.com/tecanmol/JevGaurd",
-      featured: true,
     },
     {
       index: "06",
       category: "Automation",
       title: "CalendarAgent",
       description:
-        "Intelligent automation tool that reads Gmail for assignment emails, extracts key details using AI, and creates Google Calendar events with notifications.",
+        "AI tool that reads Gmail for assignment emails, extracts key details, and creates Google Calendar events with notifications.",
       gradient: "bg-gradient-to-br from-purple-500/15 to-indigo-500/10",
-      tech: ["Python", "Gmail API", "Google Calendar API", "AI Extraction"],
+      tech: ["Python", "Gmail API", "Google Calendar API"],
       image: "assets/CalendarAgent.png",
       githubLink: "https://github.com/tecanmol/CalendarAgent",
-      featured: true,
+    },
+    {
+      index: "07",
+      category: "Security AI",
+      title: "AI Smart Contract Auditor",
+      description:
+        "AI-powered smart contract auditor for Solidity — scans and audits Ethereum smart contracts for vulnerabilities and best practices.",
+      gradient: "bg-gradient-to-br from-red-500/15 to-orange-500/10",
+      tech: ["Python", "LLM", "Solidity", "Security"],
+      image: "assets/AI-Smart-Contract-Auditor.png",
+      githubLink: "https://github.com/tecanmol/AI-Smart-Contract-Auditor",
+    },
+    {
+      index: "08",
+      category: "RAG System",
+      title: "RagChatbot",
+      description:
+        "RAG-based chatbot backend with vector search, providing context-aware responses from document knowledge bases.",
+      gradient: "bg-gradient-to-br from-teal-500/15 to-cyan-500/10",
+      tech: ["Python", "RAG", "LangChain", "Vector Search"],
+      image: "assets/RagChatbot_backend.png",
+      githubLink: "https://github.com/tecanmol/RagChatbot_backend",
     },
   ];
 
@@ -90,8 +106,7 @@ const FeaturedProjects = () => {
           </span>
         </h2>
         <p className="mt-4 text-[#8a8f98] max-w-lg text-base md:text-lg">
-          A curated selection of projects I've built — from browser extensions to
-          healthcare AI.
+          AI engineering projects — from language models to security auditing.
         </p>
       </div>
 
