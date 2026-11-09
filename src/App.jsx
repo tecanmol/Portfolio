@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './sections/Navbar';
 import Hero from './sections/Hero';
@@ -7,6 +7,7 @@ import About from './sections/About';
 import FeaturedProjects from './sections/FeaturedProjects';
 import MoreToExplore from './sections/MoreToExplore';
 import Footer from './sections/Footer';
+import IntroAnimation from './components/IntroAnimation';
 import Links from "./pages/Links";
 
 const Home = () => {
@@ -23,8 +24,13 @@ const Home = () => {
 };
 
 const App = () => {
+  const [showIntro, setShowIntro] = useState(true);
+
   return (
     <Router>
+      {showIntro && (
+        <IntroAnimation onComplete={() => setShowIntro(false)} />
+      )}
       <InteractiveBackground />
       <Routes>
         <Route path="/" element={<Home />} />

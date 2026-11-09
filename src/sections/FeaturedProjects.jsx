@@ -8,7 +8,7 @@ const FeaturedProjects = () => {
       title: "MunshiLM",
       description:
         "Hinglish-language AI assistant that understands and generates natural Hinglish conversations. Deployed on Hugging Face Spaces with real-time chat interface.",
-      gradient: "bg-gradient-to-br from-[#7170ff]/20 to-[#ca2f8c]/15",
+      gradient: "bg-gradient-to-br from-[#1a1040]/90 to-[#2d1565]/90",
       tech: ["Python", "LLM", "Transformers", "Hugging Face"],
       image: "assets/MunshiLM.png",
       githubLink: "https://huggingface.co/spaces/tecanmol/MunshiLM",
@@ -19,7 +19,7 @@ const FeaturedProjects = () => {
       title: "T&C Guardian",
       description:
         "Chrome extension that analyzes website Terms & Conditions using AI — highlighting key summaries, unfair clauses, and privacy risks.",
-      gradient: "bg-gradient-to-br from-orange-500/15 to-yellow-500/10",
+      gradient: "bg-gradient-to-br from-[#3a1a00]/90 to-[#6b3500]/90",
       tech: ["JavaScript", "React", "Node.js", "Python", "LLM"],
       image: "assets/TC_Extension.png",
       githubLink: "https://github.com/tecanmol/TC_Extension",
@@ -30,7 +30,7 @@ const FeaturedProjects = () => {
       title: "Customer Support Agent",
       description:
         "RAG-based customer support agent built with LangGraph and LangChain. Uses ChromaDB for vector search and local embeddings for context-aware responses.",
-      gradient: "bg-gradient-to-br from-[#7170ff]/15 to-blue-500/10",
+      gradient: "bg-gradient-to-br from-[#0d1a3f]/90 to-[#1a3070]/90",
       tech: ["Python", "LangGraph", "LangChain", "ChromaDB", "Streamlit"],
       image: "assets/Customer_support_agent.png",
       githubLink: "https://github.com/tecanmol/Customer-support-agent",
@@ -41,7 +41,7 @@ const FeaturedProjects = () => {
       title: "MedGuard",
       description:
         "Offline skin-disease triage system using TensorFlow.js to detect and classify 34 common skin conditions — designed for low-connectivity settings.",
-      gradient: "bg-gradient-to-br from-blue-500/15 to-cyan-500/10",
+      gradient: "bg-gradient-to-br from-[#0a3a2a]/90 to-[#0d5a3a]/90",
       tech: ["TypeScript", "React", "TensorFlow.js", "Computer Vision"],
       image: "assets/MedGuard_AI.png",
       githubLink: "https://github.com/tecanmol/MedGuard_AI",
@@ -52,7 +52,7 @@ const FeaturedProjects = () => {
       title: "JevGuard",
       description:
         "AI-powered ad detector using semantic classification to identify and remove ads from webpages — going beyond traditional rule-based blockers.",
-      gradient: "bg-gradient-to-br from-green-500/15 to-emerald-500/10",
+      gradient: "bg-gradient-to-br from-[#1a4a20]/90 to-[#0d6a30]/90",
       tech: ["Python", "NLP", "Browser Extension", "AI Classification"],
       image: "assets/JevGaurd.png",
       githubLink: "https://github.com/tecanmol/JevGaurd",
@@ -63,7 +63,7 @@ const FeaturedProjects = () => {
       title: "CalendarAgent",
       description:
         "AI tool that reads Gmail for assignment emails, extracts key details, and creates Google Calendar events with notifications.",
-      gradient: "bg-gradient-to-br from-purple-500/15 to-indigo-500/10",
+      gradient: "bg-gradient-to-br from-[#2a1a4a]/90 to-[#3d1a7a]/90",
       tech: ["Python", "Gmail API", "Google Calendar API"],
       image: "assets/CalendarAgent.png",
       githubLink: "https://github.com/tecanmol/CalendarAgent",
@@ -74,7 +74,7 @@ const FeaturedProjects = () => {
       title: "AI Smart Contract Auditor",
       description:
         "AI-powered smart contract auditor for Solidity — scans and audits Ethereum smart contracts for vulnerabilities and best practices.",
-      gradient: "bg-gradient-to-br from-red-500/15 to-orange-500/10",
+      gradient: "bg-gradient-to-br from-[#3a1010]/90 to-[#5a1a1a]/90",
       tech: ["Python", "LLM", "Solidity", "Security"],
       image: "assets/AI-Smart-Contract-Auditor.png",
       githubLink: "https://github.com/tecanmol/AI-Smart-Contract-Auditor",
@@ -85,7 +85,7 @@ const FeaturedProjects = () => {
       title: "RagChatbot",
       description:
         "RAG-based chatbot backend with vector search, providing context-aware responses from document knowledge bases.",
-      gradient: "bg-gradient-to-br from-teal-500/15 to-cyan-500/10",
+      gradient: "bg-gradient-to-br from-[#0d3a3a]/90 to-[#0a5a5a]/90",
       tech: ["Python", "RAG", "LangChain", "Vector Search"],
       image: "assets/RagChatbot_backend.png",
       githubLink: "https://github.com/tecanmol/RagChatbot_backend",
@@ -97,9 +97,12 @@ const FeaturedProjects = () => {
       id="projects"
       className="relative py-24 md:py-32 px-6 md:px-10 max-w-5xl mx-auto"
     >
-      {/* Header */}
+      {/* Header — emblematica-style bold section title */}
       <div className="mb-16 md:mb-20">
-        <h2 className="text-3xl md:text-5xl font-bold text-[#f7f8f8] leading-tight">
+        <p className="text-[11px] md:text-[12px] font-semibold tracking-[0.3em] uppercase text-[#62666d] mb-3">
+          What I Build
+        </p>
+        <h2 className="text-4xl md:text-6xl font-bold text-[#f7f8f8] leading-tight tracking-tight">
           Featured{" "}
           <span className="bg-gradient-to-r from-[#7170ff] to-[#ca2f8c] bg-clip-text text-transparent">
             Projects
