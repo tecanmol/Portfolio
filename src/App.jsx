@@ -10,7 +10,7 @@ import Footer from './sections/Footer';
 import IntroAnimation from './components/IntroAnimation';
 import Links from "./pages/Links";
 
-const Home = () => {
+const Home = ({ showIntro = true }) => {
   return (
     <div className="container mx-auto max-w-5xl relative">
       <Navbar showIntro={showIntro} />
