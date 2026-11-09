@@ -23,7 +23,7 @@ const FeaturedProjects = () => {
       </div>
 
       {/* Projects */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
 
         <ProjectBlock
           index="01"
@@ -44,7 +44,29 @@ const FeaturedProjects = () => {
           image="assets/AI Career Coach.png"
           gradient="bg-gradient-to-br from-green-500/80 to-emerald-600/70"
           tech={["TypeScript", "JavaScript", "React", "Node.js", "REST APIs", "Google Gemini API"]}
-        //   githubLink="https://github.com/tecanmol/TC_Extension"
+          githubLink="https://github.com/tecanmol/AI-Career-Coach"
+        />
+
+        <ProjectBlock
+          index="03"
+          category="Healthcare AI"
+          title="MedGuard"
+          description="Offline skin-disease triage system using AI to detect and classify 34 common skin conditions, built for real-world medical accessibility."
+          image="assets/TC_Extension.png"
+          gradient="bg-gradient-to-br from-blue-500/80 to-cyan-600/70"
+          tech={["TypeScript", "React", "TensorFlow.js", "Computer Vision"]}
+          githubLink="https://github.com/tecanmol/MedGuard_AI"
+        />
+
+        <ProjectBlock
+          index="04"
+          category="AI Content"
+          title="Newsletter"
+          description="AI-curated weekly newsletter pipeline that collects, summarizes, and delivers tech & AI trends — built with Python, LangChain, and RSS feeds."
+          image="assets/TC_Extension.png"
+          gradient="bg-gradient-to-br from-purple-500/80 to-indigo-600/70"
+          tech={["Python", "LangChain", "RSS", "Automation", "AI Summarization"]}
+          githubLink="https://github.com/tecanmol/Newsletter"
         />
 
       </div>

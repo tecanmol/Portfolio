@@ -210,6 +210,7 @@ export default function HeroChat() {
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && askBot()}
             placeholder="Ask about Anmol..."
+            aria-label="Ask about Anmol"
             className="
             flex-1
             bg-transparent
@@ -221,18 +222,31 @@ export default function HeroChat() {
 
           <button
             onClick={() => askBot()}
+            disabled={!query.trim() || loading}
             className="
             ml-2
-            px-3 py-1
+            px-4 py-1.5
             rounded-full
-            bg-white/10
-            hover:bg-white/20
-            text-xs
+            bg-blue-600
+            hover:bg-blue-700
+            disabled:bg-gray-600 disabled:cursor-not-allowed
+            text-white text-xs font-medium
             transition
+            min-w-[3rem]
           "
           >
-            Ask
+            {loading ? "..." : "Ask"}
           </button>
+
+          {messages.length > 0 && (
+            <button
+              onClick={() => { setMessages([]); setQuery(""); }}
+              className="ml-2 px-2 py-1 rounded-full text-xs text-neutral-500 hover:text-white transition"
+              aria-label="Clear chat"
+            >
+              Clear
+            </button>
+          )}
         </div>
 
       </div>

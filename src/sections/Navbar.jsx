@@ -38,9 +38,13 @@ const Navbar = () => {
         rounded-full px-3 py-2 shadow-lg">
 
         {links.map((item) => (
-          <button
+          <a
             key={item.name}
-            onClick={() => scrollToSection(item.id, item.name)}
+            href={`#${item.id}`}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection(item.id, item.name);
+            }}
             className={`px-6 py-2 rounded-full text-sm font-medium transition
             ${active === item.name
                 ? "bg-[#231c47] text-white shadow-inner"
@@ -48,7 +52,7 @@ const Navbar = () => {
             }`}
           >
             {item.name}
-          </button>
+          </a>
         ))}
       </div>
 
@@ -81,9 +85,13 @@ const Navbar = () => {
             <div className="flex flex-col gap-5 text-center">
 
               {links.map((item) => (
-                <button
+                <a
                   key={item.name}
-                  onClick={() => scrollToSection(item.id, item.name)}
+                  href={`#${item.id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.id, item.name);
+                  }}
                   className={`py-3 rounded-full transition
                     ${active === item.name
                      ? "bg-[#231c47] text-white shadow-inner"
@@ -91,7 +99,7 @@ const Navbar = () => {
                     }`}
                 >
                   {item.name}
-                </button>
+                </a>
               ))}
 
             </div>

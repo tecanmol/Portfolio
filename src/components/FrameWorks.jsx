@@ -16,7 +16,7 @@ export function FrameWorks() {
     "mongodb",
     "sqlite",
     "tailwindcss",
-    "vite.js",
+    "vitejs",
   ]
 
   return (
@@ -28,18 +28,18 @@ export function FrameWorks() {
       </OrbitingCircles>
 
       <OrbitingCircles iconSize={25} radius={100} reverse speed={2}>
-        {skills.reverse().map((skill, index) => (
+        {[...skills].reverse().map((skill, index) => (
           <Icon key={index} src={`assets/logos/${skill}.svg`} />
-        ))} 
+        ))}
       </OrbitingCircles>
     </div>
   )
 }
 
-const Icon = ({ src }) => (
+const Icon = ({ src, alt }) => (
   <img
     src={src}
     className="rounded-sm hover:scale-110 duration-200"
-    alt=""
+    alt={alt || "Tech skill icon"}
   />
 )
