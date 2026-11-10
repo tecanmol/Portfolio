@@ -1,7 +1,7 @@
 import { FlipWords } from "./FlipWords";
 import { motion } from "motion/react";
 
-const words = ["Full-Stack", "AI-Driven", "Scalable", "Intelligent"];
+const words = ["Full-Stack", "Practical", "Low-latency", "Open-source"];
 
 const HeroText = () => {
   return (
@@ -32,7 +32,7 @@ const HeroText = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-3xl md:text-5xl font-semibold text-[#f7f8f8] leading-tight"
         >
-          A developer dedicated to crafting
+          I build AI tools that do one thing
         </motion.p>
 
         <motion.p
@@ -54,7 +54,7 @@ const HeroText = () => {
           transition={{ duration: 0.6, delay: 0.9 }}
           className="text-3xl md:text-5xl font-semibold text-[#f7f8f8] leading-tight"
         >
-          systems.
+          well.
         </motion.p>
       </div>
 
@@ -67,8 +67,9 @@ const HeroText = () => {
         transition={{ duration: 0.6, delay: 1.1 }}
         className="text-[#8a8f98] text-base md:text-lg max-w-xl leading-relaxed"
       >
-        Final-year AI & ML engineering student from Mumbai, building
-        intelligent systems — from LLM-powered tools to offline healthcare AI.
+        Final-year AI & ML student at Mumbai University. I work in Python, React, and LangChain,
+        building things like a Hinglish LLM, an offline disease triage app, and tools that read
+        your Gmail and plan your week.
       </motion.p>
 
       {/* CTAs */}

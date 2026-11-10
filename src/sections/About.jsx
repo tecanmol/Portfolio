@@ -21,10 +21,8 @@ const About = () => {
           p-8 md:p-10">
           <p className="text-[#d0d6e0] text-lg md:text-xl leading-relaxed max-w-3xl">
             I'm Anmol Pandey — a final-year BE student in <span className="text-[#f7f8f8] font-medium">AI &amp; Machine Learning</span>
-            at Mumbai University (CGPA 8.84). Over the past few years I've built full-stack
-            applications, AI agents, browser extensions, and offline healthcare tools.
-            I work across Python, React, Node.js, and LangChain, with a focus on making
-            intelligent systems that are actually useful.
+            at Mumbai University (CGPA 8.84). I've shipped full-stack apps, AI agents, browser extensions, and an offline healthcare tool.
+            Python, React, Node.js, LangChain. I build tools I actually use.
           </p>
           <p className="text-[#8a8f98] text-base md:text-lg leading-relaxed max-w-3xl mt-4">
             Based in Mumbai, India. Open to remote internships and opportunities worldwide.
@@ -43,7 +41,7 @@ const About = () => {
           <ul className="space-y-3 text-[#d0d6e0] text-sm md:text-base">
             <li className="flex items-start gap-2">
               <span className="text-[#7170ff] mt-1">›</span>
-              <span>Building LLM-powered tools and AI agents</span>
+              <span>Building LLM tools and AI agents</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-[#7170ff] mt-1">›</span>
@@ -55,7 +53,7 @@ const About = () => {
             </li>
             <li className="flex items-start gap-2">
               <span className="text-[#7170ff] mt-1">›</span>
-              <span>Land an AI/ML internship — Mumbai or remote</span>
+              <span>Finding an AI/ML internship — Mumbai or remote</span>
             </li>
           </ul>
         </div>
@@ -95,7 +93,7 @@ const About = () => {
           backdrop-blur-sm
           p-8 md:p-10 text-center">
           <p className="text-[#f7f8f8] text-lg md:text-xl font-medium mb-4">
-            Interested in working together?
+            Want to work together?
           </p>
           <CopyEmailBtn />
         </div>

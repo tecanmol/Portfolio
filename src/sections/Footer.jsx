@@ -14,7 +14,7 @@ const Footer = () => {
 
           {/* Center */}
           <div className="text-[#62666d] text-xs">
-            Built with React & Tailwind
+            React + Tailwind
           </div>
 
           {/* Right Icons */}

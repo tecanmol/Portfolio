@@ -7,7 +7,7 @@ const FeaturedProjects = () => {
       category: "Hugging Face Space",
       title: "MunshiLM",
       description:
-        "Hinglish-language AI assistant that understands and generates natural Hinglish conversations. Deployed on Hugging Face Spaces with real-time chat interface.",
+        "Hinglish AI assistant that generates natural Hindi-English conversations. Live on Hugging Face Spaces with a real-time chat demo.",
       gradient: "bg-gradient-to-br from-[#1a1040]/90 to-[#2d1565]/90",
       tech: ["Python", "LLM", "Transformers", "Hugging Face"],
       image: "assets/MunshiLM.png",
@@ -18,7 +18,7 @@ const FeaturedProjects = () => {
       category: "Browser Extension",
       title: "T&C Guardian",
       description:
-        "Chrome extension that analyzes website Terms & Conditions using AI — highlighting key summaries, unfair clauses, and privacy risks.",
+        "Chrome extension that reads Terms & Conditions and flags unfair clauses, privacy risks, and key summaries.",
       gradient: "bg-gradient-to-br from-[#3a1a00]/90 to-[#6b3500]/90",
       tech: ["JavaScript", "React", "Node.js", "Python", "LLM"],
       image: "assets/TC_Extension.png",
@@ -29,7 +29,7 @@ const FeaturedProjects = () => {
       category: "AI Agent",
       title: "Customer Support Agent",
       description:
-        "RAG-based customer support agent built with LangGraph and LangChain. Uses ChromaDB for vector search and local embeddings for context-aware responses.",
+        "Customer support bot using LangGraph, LangChain, and ChromaDB. Answers questions from your own docs using vector search and local embeddings.",
       gradient: "bg-gradient-to-br from-[#0d1a3f]/90 to-[#1a3070]/90",
       tech: ["Python", "LangGraph", "LangChain", "ChromaDB", "Streamlit"],
       image: "assets/Customer_support_agent.png",
@@ -40,7 +40,7 @@ const FeaturedProjects = () => {
       category: "Healthcare AI",
       title: "MedGuard",
       description:
-        "Offline skin-disease triage system using TensorFlow.js to detect and classify 34 common skin conditions — designed for low-connectivity settings.",
+        "Skin-disease classifier that runs offline in the browser. Detects 34 conditions using TensorFlow.js — works in places with bad internet.",
       gradient: "bg-gradient-to-br from-[#0a3a2a]/90 to-[#0d5a3a]/90",
       tech: ["TypeScript", "React", "TensorFlow.js", "Computer Vision"],
       image: "assets/MedGuard_AI.png",
@@ -51,7 +51,7 @@ const FeaturedProjects = () => {
       category: "Browser Extension",
       title: "JevGuard",
       description:
-        "AI-powered ad detector using semantic classification to identify and remove ads from webpages — going beyond traditional rule-based blockers.",
+        "Ad detector that uses NLP to spot and block ads. Catches patterns rule-based blockers miss.",
       gradient: "bg-gradient-to-br from-[#1a4a20]/90 to-[#0d6a30]/90",
       tech: ["Python", "NLP", "Browser Extension", "AI Classification"],
       image: "assets/JevGaurd.png",
@@ -62,7 +62,7 @@ const FeaturedProjects = () => {
       category: "Automation",
       title: "CalendarAgent",
       description:
-        "AI tool that reads Gmail for assignment emails, extracts key details, and creates Google Calendar events with notifications.",
+        "Reads assignment emails from Gmail, pulls out the details, and adds them to your Google Calendar.",
       gradient: "bg-gradient-to-br from-[#2a1a4a]/90 to-[#3d1a7a]/90",
       tech: ["Python", "Gmail API", "Google Calendar API"],
       image: "assets/CalendarAgent.png",
@@ -73,7 +73,7 @@ const FeaturedProjects = () => {
       category: "Security AI",
       title: "AI Smart Contract Auditor",
       description:
-        "AI-powered smart contract auditor for Solidity — scans and audits Ethereum smart contracts for vulnerabilities and best practices.",
+        "Scans Ethereum smart contracts for bugs and bad patterns using an LLM. Catches common Solidity vulnerabilities.",
       gradient: "bg-gradient-to-br from-[#3a1010]/90 to-[#5a1a1a]/90",
       tech: ["Python", "LLM", "Solidity", "Security"],
       image: "assets/AI-Smart-Contract-Auditor.png",
@@ -84,7 +84,7 @@ const FeaturedProjects = () => {
       category: "RAG System",
       title: "RagChatbot",
       description:
-        "RAG-based chatbot backend with vector search, providing context-aware responses from document knowledge bases.",
+        "Chatbot that answers questions from your docs. Stores documents as vectors, matches queries, and generates answers from the right context.",
       gradient: "bg-gradient-to-br from-[#0d3a3a]/90 to-[#0a5a5a]/90",
       tech: ["Python", "RAG", "LangChain", "Vector Search"],
       image: "assets/RagChatbot_backend.png",
@@ -109,7 +109,7 @@ const FeaturedProjects = () => {
           </span>
         </h2>
         <p className="mt-4 text-[#8a8f98] max-w-lg text-base md:text-lg">
-          AI engineering projects — from language models to security auditing.
+          Tools that do real things — language models, security auditing, browser extensions.
         </p>
       </div>
 

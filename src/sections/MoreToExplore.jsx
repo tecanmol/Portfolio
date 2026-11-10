@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const cards = [
   {
     title: "Resume / CV",
-    description: "Download my full resume with detailed project history and skills.",
+    description: "Full resume with project history, skills, and contact info.",
     icon: <BookOpen size={24} />,
     link: "https://drive.google.com/file/d/1A_esucjJ-sMXq7xQav312L8vDPpyrRnD/view?usp=sharing",
     external: true,
@@ -13,7 +13,7 @@ const cards = [
   },
   {
     title: "GitHub",
-    description: "40+ open-source projects and contributions across AI, full-stack, and tools.",
+    description: "40+ open-source projects — AI, full-stack, everything.",
     icon: <Github size={24} />,
     link: "https://github.com/tecanmol",
     external: true,
@@ -29,7 +29,7 @@ const cards = [
   },
   {
     title: "Portfolio Links",
-    description: "All my socials, projects, and resources in one place.",
+    description: "Socials, projects, and resources — all in one place.",
     icon: <Globe size={24} />,
     link: "/links",
     external: false,
@@ -49,7 +49,7 @@ const MoreToExplore = () => {
           </span>
         </h2>
         <p className="mt-3 text-[#8a8f98] text-base md:text-lg max-w-lg">
-          My resume, profiles, and extended portfolio.
+          Resume, profiles, and links to everything I've built.
         </p>
       </div>
 
