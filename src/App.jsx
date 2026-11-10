@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './sections/Navbar';
 import Hero from './sections/Hero';
 import InteractiveBackground from './components/InteractiveBackground';
+import CursorGlow from './components/CursorGlow';
 import About from './sections/About';
 import FeaturedProjects from './sections/FeaturedProjects';
 import MoreToExplore from './sections/MoreToExplore';
@@ -31,6 +32,7 @@ const App = () => {
       {showIntro && (
         <IntroAnimation onComplete={() => setShowIntro(false)} />
       )}
+      <CursorGlow />
       <InteractiveBackground />
       <Routes>
         <Route path="/" element={<Home showIntro={showIntro} />} />

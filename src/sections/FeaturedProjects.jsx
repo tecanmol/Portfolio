@@ -1,4 +1,5 @@
 import ProjectBlock from "../components/ProjectBlock";
+import { motion } from "motion/react";
 
 const FeaturedProjects = () => {
   const projects = [
@@ -113,10 +114,22 @@ const FeaturedProjects = () => {
         </p>
       </div>
 
-      {/* Projects */}
+      {/* Projects — staggered entry on scroll */}
       <div className="space-y-6 md:space-y-8">
-        {projects.map((project) => (
-          <ProjectBlock key={project.index} {...project} />
+        {projects.map((project, index) => (
+          <motion.div
+            key={project.index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.08,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
+          >
+            <ProjectBlock {...project} />
+          </motion.div>
         ))}
       </div>
 

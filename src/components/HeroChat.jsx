@@ -130,8 +130,9 @@ export default function HeroChat() {
         >
 
           {messages.length === 0 && !loading && (
-            <div className="text-neutral-400 text-center py-8">
-              Ask me anything about Anmol...
+            <div className="text-neutral-400 text-center py-8 flex items-center justify-center gap-0.5">
+              <span>Ask me anything about Anmol</span>
+              <span className="inline-block w-0.5 h-4 bg-neutral-400 animate-pulse ml-0.5" />
             </div>
           )}
 

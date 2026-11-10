@@ -1,5 +1,5 @@
 import { BookOpen, Github, Globe, Linkedin, Mail } from "lucide-react";
-import { motion } from "motion/react";
+import HorizontalScroll from "../components/HorizontalScroll";
 import { Link } from "react-router-dom";
 
 const cards = [
@@ -39,9 +39,9 @@ const cards = [
 
 const MoreToExplore = () => {
   return (
-    <section id="other" className="relative py-24 md:py-32 px-6 md:px-10 max-w-5xl mx-auto">
+    <section id="other" className="relative">
       {/* Header */}
-      <div className="mb-16">
+      <div className="relative z-10 py-24 md:py-32 px-6 md:px-10 max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold text-[#f7f8f8] leading-tight">
           More{" "}
           <span className="bg-gradient-to-r from-[#7170ff] to-[#ca2f8c] bg-clip-text text-transparent">
@@ -53,59 +53,60 @@ const MoreToExplore = () => {
         </p>
       </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-        {cards.map((card, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: index * 0.08 }}
-            viewport={{ once: true }}
-          >
-            {card.external ? (
-              <a
-                href={card.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`
-                  group relative block rounded-2xl
-                  p-6 md:p-7
-                  border border-[rgba(255,255,255,0.06)]
-                  bg-[#0f1011]/60 backdrop-blur-sm
-                  bg-gradient-to-br ${card.accent}
-                  transition-all duration-300
-                  hover:border-[rgba(255,255,255,0.1)]
-                  hover:bg-[#0f1011]/80
-                `}
-              >
-                <CardContent card={card} />
-              </a>
-            ) : (
-              <Link
-                to={card.link}
-                className={`
-                  group relative block rounded-2xl
-                  p-6 md:p-7
-                  border border-[rgba(255,255,255,0.06)]
-                  bg-[#0f1011]/60 backdrop-blur-sm
-                  bg-gradient-to-br ${card.accent}
-                  transition-all duration-300
-                  hover:border-[rgba(255,255,255,0.1)]
-                  hover:bg-[#0f1011]/80
-                `}
-              >
-                <CardContent card={card} />
-              </Link>
-            )}
-          </motion.div>
+      {/* Horizontal scroll section */}
+      <HorizontalScroll>
+        {cards.map((card, i) => (
+          <Card key={i} card={card} />
         ))}
-      </div>
+        {/* Spacer so the last card doesn't disappear */}
+        <div className="w-[300px] md:w-[400px] flex-shrink-0" />
+      </HorizontalScroll>
     </section>
   );
 };
 
-/* ===== Reusable Card Content ===== */
+const Card = ({ card }) => (
+  <div className="flex-shrink-0 w-[320px] md:w-[400px]">
+    {card.external ? (
+      <a
+        href={card.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`
+          group relative block rounded-2xl
+          p-7 md:p-8
+          border border-[rgba(255,255,255,0.06)]
+          bg-[#0f1011]/80 backdrop-blur-sm
+          bg-gradient-to-br ${card.accent}
+          transition-all duration-300
+          hover:border-[rgba(255,255,255,0.12)]
+          hover:bg-[#0f1011]/90
+          min-h-[220px]
+        `}
+      >
+        <CardContent card={card} />
+      </a>
+    ) : (
+      <Link
+        to={card.link}
+        className={`
+          group relative block rounded-2xl
+          p-7 md:p-8
+          border border-[rgba(255,255,255,0.06)]
+          bg-[#0f1011]/80 backdrop-blur-sm
+          bg-gradient-to-br ${card.accent}
+          transition-all duration-300
+          hover:border-[rgba(255,255,255,0.12)]
+          hover:bg-[#0f1011]/90
+          min-h-[220px]
+        `}
+      >
+        <CardContent card={card} />
+      </Link>
+    )}
+  </div>
+);
+
 const CardContent = ({ card }) => (
   <>
     {/* Icon */}
